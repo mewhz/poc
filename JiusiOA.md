@@ -29,7 +29,6 @@ info:
   # 作者
   severity: low
   # 严重程度
-  # 说明
   metadata:
   # 元数据
     max-request: 1

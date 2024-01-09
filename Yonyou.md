@@ -35,8 +35,6 @@ http:
 # http 请求
   - method: GET
     # 请求方法
-    # redirects: true
-    # 允许重定向 默认不执行重定向
     path:
       - "{{BaseURL}}/pub/help2.php?key=../../apache/php.ini"
       # {{BaseURL}} 使用请求中的 URL 内容
@@ -102,8 +100,6 @@ http:
 # http 请求
   - method: GET
     # 请求方法
-    # redirects: true
-    # 允许重定向 默认不执行重定向
     path:
       - "{{BaseURL}}/datacache/solr.log"
       # {{BaseURL}} 使用请求中的 URL 内容
@@ -169,8 +165,6 @@ http:
 # http 请求
   - method: GET
     # 请求方法
-    # redirects: true
-    # 允许重定向 默认不执行重定向
     path:
       - "{{BaseURL}}/datacache/crmdebug.log"
       # {{BaseURL}} 使用请求中的 URL 内容
@@ -240,8 +234,6 @@ http:
 # http 请求
   - method: GET
     # 请求方法
-    # redirects: true
-    # 允许重定向 默认不执行重定向
     path:
       - "{{BaseURL}}/background/reservationcomplete.php?ID=1"
       - "{{BaseURL}}/"

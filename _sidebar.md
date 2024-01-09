@@ -3,3 +3,4 @@
 *  [九思OA](/JiusiOA)
 *  [用友](/Yonyou)
 *  [OfficeWeb365](/OfficeWeb365)
+*  [亿赛通](/Esafenet)

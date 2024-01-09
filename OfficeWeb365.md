@@ -78,8 +78,6 @@ http:
 # http 请求
   - method: GET
     # 请求方法
-    # redirects: true
-    # 允许重定向 默认不执行重定向
     path:
       - "{{BaseURL}}/Pic/Indexs?imgs=DJwkiEm6KXJZ7aEiGyN4Cz83Kn1PLaKA09"
       # {{BaseURL}} 使用请求中的 URL 内容
@@ -93,6 +91,7 @@ http:
     # 匹配规则
       - type: regex
         part: body
+        regex:
           - "\\[(font|extension|file)s\\]"
         condition: or
 
@@ -158,7 +157,6 @@ info:
   # 作者
   severity: low
   # 严重程度
-  # 说明
   metadata:
   # 元数据
     max-request: 1
