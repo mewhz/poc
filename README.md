@@ -1,24 +1,34 @@
 
 **主要收集一些 poc 以及对应的 fofa 语法和 nuclei 脚本**
 
-**当前漏洞数：14**
+**当前漏洞数：17**
 
 #### 声明
 由于传播、利用本文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，作者不为此承担任何责任。所涉及工具来自网络，安全性自测。
 
 #### 近期更新
 
-<summary> 2024-01-09</summary>
-<p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-get-viewuploadfile-任意文件读取">
-亿赛通-电子文档安全管理系统 Get ViewUploadFile 任意文件读取</a></p>
-<p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-post-viewuploadfile-任意文件读取">
-亿赛通-电子文档安全管理系统 Post ViewUploadFile 任意文件读取</a></ps>
-<p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-dump-任意文件读取">
-亿赛通-电子文档安全管理系统 dump 任意文件读取</a></p>
-<p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-importfiletypedo-文件上传">
-亿赛通-电子文档安全管理系统 importFileType.do 文件上传</a></p>
-<p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-cores-信息泄露">
-亿赛通-电子文档安全管理系统 cores 信息泄露</a></p>
+<summary> 2024-01-10</summary>
+<p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-uploadfilefromclientserviceforclient-文件上传">
+亿赛通-电子文档安全管理系统 UploadFileFromClientServiceForClient 文件上传</a></p>
+<p><a href="#/Seeyon?id=致远oa-wpsassistservlet-任意文件读取">
+致远OA wpsAssistServlet 任意文件读取</a></ps>
+<p><a href="#/Kingdee?id=金蝶-eas-pdfviewlocal-任意文件读取">
+金蝶-EAS pdfViewLocal 任意文件读取</a></p>
+
+<details>
+    <summary> 2024-01-09</summary>
+    <p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-get-viewuploadfile-任意文件读取">
+    亿赛通-电子文档安全管理系统 Get ViewUploadFile 任意文件读取</a></p>
+    <p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-post-viewuploadfile-任意文件读取">
+    亿赛通-电子文档安全管理系统 Post ViewUploadFile 任意文件读取</a></ps>
+    <p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-dump-任意文件读取">
+    亿赛通-电子文档安全管理系统 dump 任意文件读取</a></p>
+    <p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-importfiletypedo-文件上传">
+    亿赛通-电子文档安全管理系统 importFileType.do 文件上传</a></p>
+    <p><a href="#/Esafenet?id=亿赛通-电子文档安全管理系统-cores-信息泄露">
+    亿赛通-电子文档安全管理系统 cores 信息泄露</a></p>
+</details>
 
 <details>
     <summary> 2024-01-07</summary>

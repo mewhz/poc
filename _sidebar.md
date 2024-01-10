@@ -4,3 +4,5 @@
 *  [用友](/Yonyou)
 *  [OfficeWeb365](/OfficeWeb365)
 *  [亿赛通](/Esafenet)
+*  [致远](/Seeyon)
+*  [金蝶](/Kingdee)
