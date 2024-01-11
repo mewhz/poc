@@ -6,3 +6,4 @@
 *  [亿赛通](/Esafenet)
 *  [致远](/Seeyon)
 *  [金蝶](/Kingdee)
+*  [金和](/Jinher)
